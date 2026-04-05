@@ -1,33 +1,52 @@
-# 🚀 DevTrack — Full Stack System Monitoring App
+# 🚀 DevTrack — Full Stack System Monitor
 
-DevTrack is a full-stack system monitoring application that tracks CPU, RAM, and Disk usage from a Linux server and displays it in a real-time Android app.
+DevTrack is a full-stack monitoring system that tracks **CPU, RAM, and Disk usage in real-time** using a Node.js backend and an Android app built with Jetpack Compose.
 
 ---
 
-## 📱 Demo Features
+## 📱 App Preview
 
-- 📊 Live CPU, RAM, Disk usage
-- 📈 Real-time CPU graph
+### 🌙 Dark Mode
+
+![Dark Mode](./img/darkmode.png)
+
+### ☀️ Light Mode
+
+![Light Mode](./img/lightmode.png)
+
+---
+
+## 📊 Features
+
+- 📡 Real-time system monitoring (CPU, RAM, Disk)
+- 📱 Android app with modern UI (Jetpack Compose)
+- 📈 Live CPU graph
+- 🌗 Dark / Light mode toggle
 - 🔄 Auto-refresh every 5 seconds
-- 🌙 Dark mode support
-- ⚠️ High usage alerts
-- 🌐 Deployed backend (Render)
+- 🌐 Backend deployed on Render
+- 🐳 Dockerized backend
 
 ---
 
-## 🧠 Architecture
+## 🧱 Architecture
 
-```
-Android App (Compose)
-        ↓
-ViewModel (State)
-        ↓
-Retrofit (API)
-        ↓
-Node.js Backend (Render)
-        ↓
-Bash Scripts (Linux)
-```
+Android App (Kotlin + Compose)
+↓
+Retrofit API Calls
+↓
+Node.js + Express Backend
+↓
+Shell Scripts (CPU / RAM / Disk)
+
+---
+
+## 📡 API Endpoints
+
+| Endpoint | Description |
+| -------- | ----------- |
+| `/cpu`   | CPU usage   |
+| `/ram`   | RAM usage   |
+| `/disk`  | Disk usage  |
 
 ---
 
@@ -37,58 +56,28 @@ Bash Scripts (Linux)
 
 - Kotlin
 - Jetpack Compose
+- ViewModel
 - Retrofit
-- ViewModel + Coroutines
-- MPAndroidChart
 
 ### Backend
 
 - Node.js
 - Express.js
-- Shell scripts
-
-### DevOps
-
-- Docker (local)
-- Render (deployment)
+- Docker
+- Shell scripting
 
 ---
 
 ## 📂 Project Structure
 
-```
 DevTrack/
-├── backend/
 ├── android-app/
-```
+├── backend/
+├── img/
+└── README.md
 
 ---
 
-## 🚀 Setup
+## 👨‍💻 Author
 
-### Backend
-
-```
-cd backend
-npm install
-node server.js
-```
-
-### Android
-
-- Open `android-app` in Android Studio
-- Run on emulator
-
----
-
-## 🌐 Live API
-
-```
-https://your-render-url.onrender.com/cpu
-```
-
----
-
-## 💼 Resume Highlight
-
-Built a full-stack Android monitoring app with a deployed Node.js backend and real-time system metrics visualization.
+Shivam
